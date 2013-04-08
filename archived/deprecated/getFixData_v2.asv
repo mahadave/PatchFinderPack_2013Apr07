@@ -1,0 +1,11 @@
+function [FixPoints] = getFixData_v2(folderPath,users)
+
+    FixPoints =[];
+    nu = length(users);
+    for j = 1:nu % for all users find Fixation Points
+            user = users{j};
+            Pts = getFixationPointsAcrossUsers_v2(folderPath,user);
+            FixPoints = [FixPoints ; Pts];
+    end        
+    
+end
